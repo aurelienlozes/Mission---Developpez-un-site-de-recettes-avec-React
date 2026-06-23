@@ -86,6 +86,17 @@ web_modules/
 # Next.js build output
 .next
 out
+build
+
+# TypeScript
+*.tsbuildinfo
+next-env.d.ts
+
+# Variables d'environnement (Sécurité !)
+.env*.local
+
+# Vercel (si vous déployez dessus)
+.vercel
 
 # Nuxt.js build / generate output
 .nuxt
