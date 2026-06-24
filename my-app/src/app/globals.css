@@ -26,6 +26,14 @@ body {
 }
 
 body {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px; /* Largeur maximale de votre page */
+  margin-left: auto;  /* Centre le bloc horizontalement */
+  margin-right: auto; /* Centre le bloc horizontalement */
+  padding-left: 16px; /* Sécurité pour les écrans mobiles */
+  padding-right: 16px;
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;

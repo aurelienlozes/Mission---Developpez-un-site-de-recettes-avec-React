@@ -26,8 +26,10 @@ export default function RootLayout({ children }: { children: ReactNode }) {
       <body className={`${geistSans.variable} ${geistMono.variable}`}>
         <div className={styles.page}>
           <Header />
-          <main>
-            {children}
+            <main className={styles.mainContent}>
+              <div className={styles.contentWrapper}>
+             {children}
+             </div>
           </main>
         </div>
       </body>
