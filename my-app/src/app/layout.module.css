@@ -17,9 +17,6 @@
   padding: 0 1rem;
 }
 
-.header {
-    display: flex;
-}
 
 .headerLogo {
     z-index: 10;
