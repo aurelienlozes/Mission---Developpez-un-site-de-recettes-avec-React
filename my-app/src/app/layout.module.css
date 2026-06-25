@@ -11,7 +11,7 @@
 }
 
 .contentWrapper {
-  max-width: 1080px;
+  max-width: 100%;
   width: 100%;
   margin: 0 auto;
   padding: 0 1rem;
@@ -20,6 +20,21 @@
 .header {
     display: flex;
 }
+
+.headerLogo {
+    z-index: 10;
+    position: absolute;
+    margin: 30px;
+}
+
+.headerBackground {
+    z-index: 1;
+    position: relative;
+    width: 100%;
+    height: 667px;
+
+}
+
 
 .footer {
     display: flex;
