@@ -1,4 +1,6 @@
 import React from "react";
+import styles from "@/app/styles.module.css";
+import Image from "next/image";
 
 
 export interface RecipeIngredient {
@@ -42,24 +44,24 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
   const imgSrc = `/images/${recipe.image}`;
 
   return (
-    <article className="recipe-card">
-      <div className="recipe-img">
+    <article className={styles.recipeCard}>
+      <div className={styles.recipeImg}>
         <img src={imgSrc} alt={recipe.name} loading="lazy" />
-        <span className="recipe-time">{formatTime(recipe.time)}</span>
+        <span className={styles.recipeTime}>{formatTime(recipe.time)}</span>
       </div>
 
-      <div className="recipe-body">
-        <h2 className="recipe-title">{recipe.name}</h2>
+      <div className={styles.recipeBody}>
+        <h2 className={styles.recipeTitle}>{recipe.name}</h2>
 
-        <p className="recipe-label">Recette</p>
-        <p className="recipe-desc">{recipe.description}</p>
+        <p className={styles.labels}>Recette</p>
+        <p className={styles.recipeDesc}>{recipe.description}</p>
 
-        <p className="recipe-label">Ingrédients</p>
-        <ul className="ingredients-grid">
+        <p className={styles.labels}>Ingrédients</p>
+        <ul className={styles.ingredientsGrid}>
           {recipe.ingredients.map((ing, i) => (
             <li key={`${ing.ingredient}-${i}`}>
-              <span className="ingredient-name">{ing.ingredient}</span>
-              <span className="ingredient-qty">{formatQuantity(ing)}</span>
+              <span className={styles.ingredientName}>{ing.ingredient}</span>
+              <span className={styles.ingredientQty}>{formatQuantity(ing)}</span>
             </li>
           ))}
         </ul>

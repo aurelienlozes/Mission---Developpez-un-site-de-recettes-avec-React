@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono, Manrope } from "next/font/google";
+import { Manrope } from "next/font/google";
+import { Anton } from "next/font/google";
 import "./globals.css";
 import styles from "@/app/layout.module.css";
 import Header from "@/components/Header/Header";
@@ -12,6 +13,12 @@ const manrope = Manrope({
   subsets: ["latin"],
 });
 
+const anton = Anton({
+  weight: "400",
+  variable: "--font-anton",
+  subsets: ["latin"],
+});
+
 
 export const metadata: Metadata = {
   title: "Create Next App",
@@ -21,7 +28,7 @@ export const metadata: Metadata = {
 export default function RootLayout({ children }: { children: ReactNode }) {
   return (
     <html lang="fr">
-      <body className={`${manrope.variable}`}>
+      <body className={`${manrope.variable}` + ` ${anton.variable}`}>
 
         <div className={styles.page}>
           <Header />
