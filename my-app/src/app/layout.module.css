@@ -25,6 +25,11 @@
     margin: 30px;
 }
 
+.headerImage {
+    object-fit: cover;
+    object-position: center;
+}
+
 .headerBackground {
     z-index: 1;
     position: relative;

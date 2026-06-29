@@ -10,7 +10,7 @@ const Header = () => {
                 <Image src="/images/logo.svg" alt="Logo" width={207} height={51} />
             </div>
             <div className={styles.headerBackground}>
-                <Image  src="/images/banner.jpg" alt="Banner" objectFit="cover" objectPosition="center" fill  />
+                <Image  src="/images/banner.jpg" alt="Banner" className={styles.headerImage} fill priority />
             </div>
         </header>
     );
