@@ -1,7 +1,6 @@
 import React from "react";
 import styles from "@/app/styles.module.css";
-import Image from "next/image";
-
+import Link from 'next/link'
 
 export interface RecipeIngredient {
   ingredient: string;
@@ -44,6 +43,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
   const imgSrc = `/images/${recipe.image}`;
 
   return (
+    <Link href={`/recipe/${recipe.slug}`}>
     <article className={styles.recipeCard}>
       <div className={styles.recipeImg}>
         <img src={imgSrc} alt={recipe.name} loading="lazy" />
@@ -67,6 +67,7 @@ function RecipeCard({ recipe }: { recipe: Recipe }) {
         </ul>
       </div>
     </article>
+    </Link>
   );
 }
 
