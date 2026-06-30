@@ -4,9 +4,6 @@
     padding: 50px;
 }
 
-.recipeImage {
-    border-radius: 20px;
-}
 
 .recipeCard {
     display: flex;

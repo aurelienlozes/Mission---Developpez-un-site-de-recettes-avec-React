@@ -29,8 +29,8 @@ const RecipePage = ({ params }) => {
 
     return (
         <article className={styles.recipePage}>
-            <div className={styles.recipeImage}>
-                <Image src={`/images/${recipe.image}`} alt={recipe.name} width={606} height={738} />
+            <div>
+                <Image src={`/images/${recipe.image}`} alt={recipe.name} width={606} height={738} style={{ borderRadius: '21px' }} />
             </div>
             <div className={styles.recipeCard}>
                 <h1 className={styles.recipeTitle}>{recipe.name}</h1>
