@@ -23,13 +23,13 @@ export interface Recipe {
 }
 
 /** Formate la quantité + unité d'un ingrédient en une chaîne lisible */
-function formatQuantity(ing: RecipeIngredient): string {
+export function formatQuantity(ing: RecipeIngredient): string {
   if (ing.quantity === undefined) return "";
   return ing.unit ? `${ing.quantity} ${ing.unit}` : String(ing.quantity);
 }
 
 /** Formate un temps en minutes en "Xmin" ou "Xh" */
-function formatTime(minutes: number): string {
+export function formatTime(minutes: number): string {
   if (minutes === 0) return "Rapide";
   if (minutes < 60) return `${minutes}min`;
   const h = Math.floor(minutes / 60);
