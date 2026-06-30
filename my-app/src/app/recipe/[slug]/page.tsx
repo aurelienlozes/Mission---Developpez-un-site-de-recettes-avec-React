@@ -9,7 +9,7 @@ import styles from '@/app/page.module.css'
 import { formatQuantity, formatTime } from '@/components/RecipeCard/recipeCard'
 
 
-function formatDescription(description) {
+function formatDescription(description: string) {
     // Diviser la description en phrases
     const sentences = description.split('. ');
     // créer une liste d'éléments numérotés pour chaque phrase
@@ -18,7 +18,7 @@ function formatDescription(description) {
     ));
 }
 
-const RecipePage = ({ params }) => {
+const RecipePage = ({ params }: { params: Promise<{ slug: string }> }) => {
     const { slug } = use(params)
 
     const recipe = data.find((r) => r.slug === slug)
