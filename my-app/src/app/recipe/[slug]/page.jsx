@@ -8,6 +8,16 @@ import data from '../../../data/recipes.json'
 import styles from '@/app/page.module.css'
 import { formatQuantity, formatTime } from '@/components/RecipeCard/recipeCard'
 
+
+function formatDescription(description) {
+    // Diviser la description en phrases
+    const sentences = description.split('. ');
+    // créer une liste d'éléments numérotés pour chaque phrase
+    return sentences.map((sentence, index) => (
+        <li key={index} className={styles.recipeDescription}>{index + 1}. {sentence}</li>
+    ));
+}
+
 const RecipePage = ({ params }) => {
     const { slug } = use(params)
 
@@ -51,10 +61,9 @@ const RecipePage = ({ params }) => {
                         <span className={styles.ingredientName}>{recipe.appliance}</span>
                     </li>
                 </ul>
-
-                <h2 className={styles.labels}>recette</h2>
-
-                <p>{recipe.instructions}</p>
+                <h2 className={styles.labels}>Recette</h2>
+                <ul className={styles.recipeDescription}>{formatDescription(recipe.description)}
+                </ul>
             </div>
         </article>
     )
