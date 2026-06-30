@@ -9,9 +9,9 @@ export default function Home() {
   return (
     <main className={styles.maincontent}>
       <div className={styles.cardsGrid}>{
-      recipesData.map((recipe) => (
-        <RecipeCard key={recipe.id} recipe={recipe} />
-      ))
+        recipesData.map((recipe) => (
+          <RecipeCard key={recipe.id} recipe={recipe} />
+        ))
       }
       </div>
     </main>

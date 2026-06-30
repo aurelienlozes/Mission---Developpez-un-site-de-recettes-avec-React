@@ -29,8 +29,8 @@ const RecipePage = ({ params }: { params: Promise<{ slug: string }> }) => {
 
     return (
         <article className={styles.recipePage}>
-            <div>
-                <Image src={`/images/${recipe.image}`} alt={recipe.name} width={606} height={738} style={{ borderRadius: '21px' }} />
+            <div className={styles.recipeImg}>
+                <img src={`/images/${recipe.image}`} alt={recipe.name} />
             </div>
             <div className={styles.recipeCard}>
                 <h1 className={styles.recipeTitle}>{recipe.name}</h1>
