@@ -7,11 +7,13 @@ import styles from "@/app/styles.module.css";
 
 export default function Home() {
   return (
-    <main className={styles.cardsGrid}>{
+    <main className={styles.maincontent}>
+      <div className={styles.cardsGrid}>{
       recipesData.map((recipe) => (
         <RecipeCard key={recipe.id} recipe={recipe} />
       ))
       }
+      </div>
     </main>
   );
 }

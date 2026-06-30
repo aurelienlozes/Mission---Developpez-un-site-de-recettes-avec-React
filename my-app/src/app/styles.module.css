@@ -1,12 +1,19 @@
-
+.mainContent {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    
+  }
 
 .cardsGrid {
     padding: 50px 100px;
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+    grid-template-columns: repeat(auto-fit, 310px);
     gap: 50px 120px;
-    background-color: var(--pagesBackground);
     max-width: 1440px;
+    margin: 0 auto;
+    background-color: var(--pagesBackground);
   }
 
 
